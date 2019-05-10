@@ -10,31 +10,38 @@
   <header class="main-header">
     <nav class="system-navigation">
       <a class="main-header-logo-current">
-        <img <!-- Здесь будет логотип магазина --!>>
+        <img <!-- Здесь будет логотип магазина -->>
       </a>
 
-      <!--Пока не знаю как написать форму Поиск: -->
+      <form action="" method="get">
+  <input name="s" placeholder="Поиск:" type="search">
+  <button type="submit"><img src="#"></button>
+</form>
 
-      <div id="system-navigation" class="system-navigation">
-        <ul class="list-1">
-        <li><a href="#">Закладки:</li> <!-- Пока не знаю как счетчик ставить для корзины и закладок-->
-        <li><a href="#">Корзина:</li>
-      </ul>
-    </div>
+      <div class="system-navigation">
+        <ul class="user-menu">
+          <li><a href="#">Закладки:0</li> <!-- Пока не знаю как счетчик ставить для корзины и закладок-->
+          <li><a href="#">Корзина:0</li>
+        </ul>
+      </div>
 
       <a class="buy-button" href="#">Оформить заказ</a>
+
+      <a class="login-link" href="#">Войти</a>
+
+      <a class="register-link" href="#">Регистрация</a>
 
     </nav>
     <section class="intro-menu">
       <h1>Интернет-магазин<br>
         строительных материалов<br>
         и инструментов для ремонта</h1>
-      <!--Здесь есть номер телефона, я подуумал, что его можно в качестве изображения вставить-->
-      <b class="adress">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8Б</b>
 
-      <a class="login-link" href="#">Войти</a>
+      <a href="tel:+78125550555">+7(812)555-05-55</a>
+      <!--Номер с ссылочкой-->
 
-      <a class="register-link" href="#">Регистрация</a>
+      <b class="adress-top">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8Б</b>
+
 
     </section>
     <nav class="main-navigation">
@@ -46,17 +53,78 @@
         <li><a href="#">Спецпредложеня</a></li>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Контакты</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
       </ul>
     </nav>
-</header>
-<main>
-  <section class="main-categories">
-    <a class="img-categories" href="#">
-      <img src="#">
-    </a>
+  </header>
+  <main>
 
-</main>
-</body>
 
-</html>
+  </main>
+  <footer>
+    <section class="info">
+      <div class="shop-info">
+        <h3>Компания "Техномарт"</h3>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и <br>
+          строительства не оставят равнодушными любителей сэкономить на гастарбайтерах.</p>
+        <p></p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          Техномарт работает со многиими транспортными компаниями:</p>
+        <ul class="shipping-companies">
+          <li>Деловые линиии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="more-about-company" href="#">Подробнее о копании</a>
+      </div>
+      <div class="contacts">
+        <h3>Контакты</h3>
+        <p>Вы можете забрать товар самии,<br>
+          заехав в наш офис:</p>
+        <a href="https://yandex.ru/maps/?um=constructor%3A21af0fb1abdae613fbf93d9bff1f2ef4ea6358be0fe0fdfe7d41dbea825c28fb&amp;source=constructorStatic" target="_blank"><img
+            src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A21af0fb1abdae613fbf93d9bff1f2ef4ea6358be0fe0fdfe7d41dbea825c28fb&amp;width=438&amp;height=210&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+        <a class="location-map" href="#">Заблудились?Напшите нам!</a>
+      </div>
+    </section>
+    <section class="footer-menu">
+      <nav class="footer-navigation">
+
+        <a class="footer-navigation-logo-current">
+          <img <!-- Здесь будет логотип магазина -->>
+        </a>
+
+          <ul class="bottom-navigation">
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <p class="adress-bottom">г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8<br>
+            +7(812)555-05-55
+          </p>
+
+
+          <ul class="categories-bottom">
+            <li><a href="#">Материалы</a>></li>
+            <li><a href="#">Техника</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a href="#">Спецпредложеня</a></li>
+          </ul>
+
+    </section>
+    <section class="footer-info">
+      <p>©2010-2017 Компания "Техномарт"<br>
+        Все права защищены</p>
+      <ul class="social-network">
+        <li><a href="#" </a></li>
+        <li><a href="#" </a></li>
+        <li><a href="#" </a></li>
+      </ul>
+      <b>Обратная связь:
+        <a class="bottom-contacts" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </b>
+      <b>Разрабоотано-
+        <a class="bottom-contacts" href="htmlacademy.ru">htmlacademy.ru</a>
+      </b>
+      </body>
+      </html>
