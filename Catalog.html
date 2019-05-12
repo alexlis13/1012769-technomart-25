@@ -70,38 +70,40 @@
     <h1>Перфораторы</h1>
     <!-- фильтр по цене-->
     <h3>Производители</h3>
+    <form action="categories">
     <ul class="list-firm">
       <li>
-        <input type="checkbox" name="firm1" value="Bosch" checked>
+        <input type="checkbox" name="Bosch" value="Bosch" checked>
       </li>
       <li>
-        <input type="checkbox" name="firm1" value="Интерскол">
+        <input type="checkbox" name="Интерскол" value="Интерскол">
       </li>
-      <input type="checkbox" name="firm1" value="Makita" checked>
+      <input type="checkbox" name="Makita" value="Makita" checked>
       </li>
-      <input type="checkbox" name="firm4" value="Dewalt">
+      <input type="checkbox" name="Dewalt" value="Dewalt">
       </li>
       <li>
-        <input type="checkbox" name="firm5" value="Hitachi">
+        <input type="checkbox" name="Hitachi" value="Hitachi">
       </li>
     </ul>
     <div class="buy-supply">
       <h3>Питание:</h3>
       <ul class="list-supply">
         <li>
-          <input type="radio" name="supply" value="accumulator" checked>
-          <input type="radio" name="supply" value="lan">
+          <input type="radio" name="accumulator" value="accumulator" checked>
+          <input type="radio" name="lan" value="lan">
         </li>
       </ul>
 
       <button type="submit" class="button-show">Показать</button>
     </div>
+  </form>
     <!--каталог товаров-->
     <div class="catalog catalog-drill">
       <article class="drill">
         <div class="drill-actions">
-          <a href="#buy">Купить</a>
-          <a href="#in-bookmark">В закладки</a>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
         </div>
         <div class="drill-image">
           <img src="#" alt="Перфоратор Bosch BFG 3000">
@@ -258,14 +260,13 @@
         <ul class="bottom-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a href="#">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <p class="adress-bottom">г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8<br>
           +7(812)555-05-55
         </p>
-
 
         <ul class="categories-bottom">
           <li><a href="#">Материалы</a>></li>
@@ -278,18 +279,16 @@
     <section class="footer-info">
       <p>©2010-2017 Компания "Техномарт"<br>
         Все права защищены</p>
-      <ul class="social-network">
-        <li><a href="#" </a> </li> <li><a href="#" </a> </li> <li><a href="#" </a> </li> </ul> <b>Обратная связь:
-                <a class="bottom-contacts" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-                </b>
-                <b>Разрабоотано-
-                  <a class="bottom-contacts" href="htmlacademy.ru">htmlacademy.ru</a>
-                </b>
-
-
-
-
-
+      <table class="social-network">
+        <tr>
+          <td>Обратная связь:</td>
+          <td>Разрабоотано-</td>
+        </tr>
+        <tr>
+          <td><a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a></td>
+          <td><a href="htmlacademy.ru">mail@htmlacademy.ru</a></td>
+        </tr>
+      </table>
 </body>
 
 </html>
