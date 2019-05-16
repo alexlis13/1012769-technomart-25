@@ -70,37 +70,46 @@
     <h1>Перфораторы</h1>
     <!-- фильтр по цене-->
     <h3>Производители</h3>
-    <form action="categories.">
-      <ul class="list-firm">
-        <li>
-          <input type="checkbox" name="Bosch" value="Bosch" checked>
-        </li>
-        <li>
-          <input type="checkbox" name="Интерскол" value="Интерскол">
-        </li>
-        <input type="checkbox" name="Makita" value="Makita" checked>
-        </li>
-        <input type="checkbox" name="Dewalt" value="Dewalt">
-        </li>
-        <li>
-          <input type="checkbox" name="Hitachi" value="Hitachi">
-        </li>
-      </ul>
-      <div class="buy-supply">
-        <h3>Питание:</h3>
-        <ul class="list-supply">
-          <li>
-            <input type="radio" name="accumulator" value="accumulator" checked>
-            <input type="radio" name="lan" value="lan">
+    <form class="filter" action="#" method="get">
+      <fieldset>
+        <legend>Производители:</legend>
+        <ul>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" name="Bosch" type="checkbox" id="filter-Bosch" checked>
+            <label for="filter-Bosch">Bosch</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" name="Bosch" type="checkbox" id="filter-Интерскол">
+            <label for="filter-Интерскол">Интерскол</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" name="Makita" type="checkbox" id="filter-Makita" checked>
+            <label for="filter-Makita">Makita</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" name="Dewalt" type="checkbox" id="filter-Dewalt">
+            <label for="filter-Dewalt">Dewalt</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" name="Hitachi" type="checkbox" id="filter-Hitachi">
+            <label for="filter-Hitachi">Hitachi</label>
           </li>
         </ul>
-
-        <button type="submit" class="button-show">Показать</button>
-      </div>
+      </fieldset>
+      <fieldset>
+        <legend>Питание:</legend>
+        <ul>
+          <input class="visually-hidden filter-input-radio" name="product-type" type="radio" id="filter-battery" checked>
+          <label for="filter-battery">Аккумуляторные</label>
+          <input class="visually-hidden filter-input-radio" name="product-type" type="radio" id="filter-connect">
+          <label for="filter-connect">Сетевые</label>
+        </ul>
+      </fieldset>
+      <button class="filter-show-result" type="submit" >Показать</button>
     </form>
     <!--каталог товаров-->
     <div class="catalog catalog-drill">
-      <article class="drill">
+            <article class="drill">
         <div class="drill-actions">
           <a href="#">Купить</a>
           <a href="#">В закладки</a>

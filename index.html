@@ -27,7 +27,32 @@
 
       <a class="buy-button" href="#">Оформить заказ</a>
 
-      <a class="login-link" href="#">Войти</a>
+      <a class="login-link" href="login.html">Войти</a>
+      <section class="modal modal-login">
+        <h3>Личный кабинет</h3>
+        <p>Введите свой логин и пароль</p>
+        <form class="login-form" action="#" method="post">
+          <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+          </p>
+          <p class="login-password-info">
+            <label for="login-password-info">
+              <input type="checkbox" name="remember">
+              Запомниите меня
+            </label>
+            <a class="restore" href="#">Я забыл пароль</a>
+          </p>
+          <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="modal-close" type="submit">
+          Закрыть
+        </button>
+      </section>
 
       <a class="register-link" href="#">Регистрация</a>
 
@@ -58,6 +83,7 @@
   </header>
   <main>
 
+
   </main>
   <footer>
     <section class="info">
@@ -80,8 +106,27 @@
         <p>Вы можете забрать товар самии,<br>
           заехав в наш офис:</p>
         <a href="https://yandex.ru/maps/?um=constructor%3A21af0fb1abdae613fbf93d9bff1f2ef4ea6358be0fe0fdfe7d41dbea825c28fb&amp;source=constructorStatic" target="_blank"><img
-            src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A21af0fb1abdae613fbf93d9bff1f2ef4ea6358be0fe0fdfe7d41dbea825c28fb&amp;width=438&amp;height=210&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+            src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A21af0fb1abdae613fbf93d9bff1f2ef4ea6358be0fe0fdfe7d41dbea825c28fb&amp;width=438&amp;height=210&amp;lang=ru_RU"
+            alt="Офис компании по адресу ул.Большая Конюшенная, д.19/8" style="border: 0;" /></a>
         <a class="location-map" href="#">Заблудились?Напшите нам!</a>
+        <section class="modal modal-adress">
+          <form class="pofile-form" action="#" method="post">
+            <p>
+              <label class="visually-hidden" for="user-name">Ваше имя:</label>
+              <input class="footer-feedback-name" id="user-name" type="text" name="form-name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label class="visually-hidden" for="user-mail">Ваш e-mail:</label>
+              <input class="footer-feedback-mail" id="user-mail" type="text" name="form-mail" placeholder="email@example.com">
+            </p>
+            <p>
+              <label class="visually-hidden" for="user-message">Текст письма:</label>
+              <input class="footer-feedback-message" id="user-message" type="text" name="form-message" placeholder="В свободной форме">
+            </p>
+            <button class="modal-close" type="button">
+              Отправить
+            </button>
+          </form>
       </div>
     </section>
     <section class="footer-menu">
