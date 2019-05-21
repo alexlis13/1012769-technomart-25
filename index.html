@@ -127,49 +127,73 @@
               Отправить
             </button>
           </form>
+        </section>
       </div>
-    </section>
-    <section class="footer-menu">
-      <nav class="footer-navigation">
+      <section class="footer-menu">
+        <nav class="footer-navigation">
 
-        <a class="footer-navigation-logo-current">
-          <img src="img/svg-technomart/logo-technomart.svg" width="150" height="100" alt="Логотип магазина 'Техномарт'">
-        </a>
+          <a class="footer-navigation-logo-current">
+            <img src="img/svg-technomart/logo-technomart.svg" width="150" height="100" alt="Логотип магазина 'Техномарт'">
+          </a>
 
-        <ul class="bottom-navigation">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <p class="adress-bottom">г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8<br>
-          +7(812)555-05-55
-        </p>
+          <ul class="bottom-navigation">
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <p class="adress-bottom">г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8<br>
+            +7(812)555-05-55
+          </p>
 
 
-        <ul class="categories-bottom">
-          <li><a href="#">Материалы</a>></li>
-          <li><a href="#">Техника</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Спецпредложеня</a></li>
-        </ul>
+          <ul class="categories-bottom">
+            <li><a href="#">Материалы</a>></li>
+            <li><a href="#">Техника</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a href="#">Спецпредложеня</a></li>
+          </ul>
 
-    </section>
-    <section class="footer-info">
-      <p>©2010-2017 Компания "Техномарт"<br>
-        Все права защищены</p>
+      </section>
+      <section class="footer-info">
+        <p>©2010-2017 Компания "Техномарт"<br>
+          Все права защищены</p>
 
-      <table class="social-network">
-        <tr>
-          <td>Обратная связь:</td>
-          <td>Разрабоотано-</td>
-        </tr>
-        <tr>
-          <td><a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a></td>
-          <td><a href="htmlacademy.ru">mail@htmlacademy.ru</a></td>
-        </tr>
-      </table>
+        <table class="social-network">
+          <tr>
+            <td>Обратная связь:</td>
+            <td>Разрабоотано-</td>
+          </tr>
+          <tr>
+            <td><a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a></td>
+            <td><a href="htmlacademy.ru">mail@htmlacademy.ru</a></td>
+          </tr>
+        </table>
+      </section>
+  </footer>
+  <!-- Выплывающееся окошко -->
+  <section class="modal modal-adress">
+    <form class="pofile-form" action="#" method="post">
+      <button type="button">#</button>
+      <!--кнопка закрыть -->
+      <p>
+        <label class="visually-hidden" for="user-name">Ваше имя:</label>
+        <input class="footer-feedback-name" id="user-name" type="text" name="form-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label class="visually-hidden" for="user-mail">Ваш e-mail:</label>
+        <input class="footer-feedback-mail" id="user-mail" type="text" name="form-mail" placeholder="email@example.com">
+      </p>
+      <p>
+        <label class="visually-hidden" for="user-message">Текст письма:</label>
+        <input class="footer-feedback-message" id="user-message" type="text" name="form-message" placeholder="В свободной форме">
+      </p>
+      <button class="modal-close" type="button">
+        Отправить
+      </button>
+    </form>
+  </section>
 </body>
 
 </html>
