@@ -1,9 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 24px;
   font-weight: 400;
   font-style: normal;
   color: #000;
@@ -11,97 +14,102 @@ body {
 }
 
 .modal-adress {
-  display: none;
+  opacity: 0;
 }
 
 .modal-login {
-  display: none;
+  opacity: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-.main-header-logo-current {
-  display: block;
+.nav-block__logo {
   width: 220px;
   height: 47px;
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
   text-align: center;
-  box-sizing: border-box;
-  margin-left: 170px;
+  margin-right: 17px;
+  padding: 13px 55px;
+  color: white;
 }
 
-.main-header-logo-current img:hover {
+.nav-block__logo img:hover {
   background-color: #ca2c37;
 }
 
-.main-header-logo-current img:active {
+.nav-block__logo img:active {
   background-color: #ba2732;
 }
 
-.top-navigation {
-  width: 1280px;
-  height: 42px;
-  background-color: #293449;
-  font-family: Cuprum;
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 940px;
+  border: 1px solid red;
+  margin: auto;
+}
+
+.nav-block {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  background: #293449;
+  font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.nav-block__buys {
+  width: 49%;
+  display: flex;
+  align-items: center;
   font-size: 17px;
-  font-weight: 400;
-  line-height: 18px;
-  background-color: #293449;
 }
 
-.top-navigation a:hover {
+.nav-block__buys a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 17px;
+}
+
+.nav-block__buys a:hover {
   background-color: #212a3a;
 }
 
-.top-navigation a:active {
+.nav-block__buys a:active {
   background-color: #161d29;
 }
 
-.search {
-  margin-left: 407px;
+.nav-block__main {
+  width: 49%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: auto;
 }
 
-.user-menu {
-  width: 150px;
-  min-height: 42px;
-  background-color: #212a3a;
-  margin-left: 660px;
-}
-
-.user-menu a:hover {
-  background-color: #212a3a;
-}
-
-.user-menu a:focus {
-  background-color: #161d29;
-}
-
-.buy-button {
-  display: block;
+.nav-block__buy-button {
   width: 150px;
   height: 42px;
   background-color: #63a63e;
-  color: #ffffff;
-  font-family: Cuprum;
+  padding: 13px 15px;
   font-size: 17px;
-  text-align: center;
-  margin-left: 960px;
+  color: #ffffff;
+  margin-left: 30px;
 }
 
-.buy-button a:hover {
-  background-color: #5fbb2d;
+.nav-block__buy-button a:hover {
+  color: #ca2c37;
 }
 
-.buy-button a:active {
-  background-color: #518534;
+.nav-block__buy-button a:active {
+  color: #ba2732;
 }
 
 .categories-bottom,
 .bottom-navigation,
-.site-navigation,
+.site-nav,
 .user-menu {
   list-style: none;
 }
@@ -110,8 +118,35 @@ header {
   background-color: #f1f5f7;
 }
 
-.user-menu a {
-  color: #ffffff;
+.main-menu {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  background: #f3f7f8;
+  font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.main-menu__name {
+  width: 32%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-left: 53px;
+  margin-top: 49px;
+}
+
+.main-menu__contacts {
+  width: 32%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 59px;
+}
+
+.main-menu__buttons {
+  width: 32%;
+  display: flex;
+  align-items: center;
 }
 
 .login-link {
@@ -119,7 +154,7 @@ header {
   width: 121px;
   height: 45px;
   color: #000000;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 400;
   line-height: 21px;
@@ -138,7 +173,7 @@ header {
   width: 150px;
   height: 45px;
   color: #000000;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 400;
   line-height: 21px;
@@ -152,55 +187,67 @@ header {
   color: #000000;
 }
 
-.name-shop {
+.main-menu__name-shop {
   width: 196px;
   color: #ee3643;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 16px;
-  font-style: italic;
   line-height: 23px;
-  display: block;
+  font-style: italic;
 }
 
-.phone-shop {
-  display: block;
-  width: 151px;
+.main-menu__phone-shop {
   color: #e9292a;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0.42px;
+  width: 270px;
+  height: 45px;
+  border: 3px solid #ffffff;
+  display: flex;
+  padding: 13px 52px 11px 74px;
 }
 
-.adress-top {
-  width: 250px;
-  display: block;
+.main-menu__adress-top {
   color: #32425c;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
 }
 
-.main-navigation {
-  width: 940px;
+/* ============================================== */
+.main-nav {
   height: 60px;
   box-shadow: inset 0 -5px 0 #293449;
-  background-color: #32425c;
+  margin-bottom: 86px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.site-navigation {
-  display: inline-block;
+.site-nav {
   color: #ffffff;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
-  font-weight: 400;
+  width: 100%;
+  display: flex;
+  font-size: 17px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-nav__list{
+  background-color: #32425c;
+  display: flex;
+  width: 100%;
+}
+
+.site-nav-setting {
+  margin: auto;
 }
 
 .name-company {
-  /* Style for "КОМПАНИЯ «" */
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -208,25 +255,24 @@ header {
 }
 
 .info-company {
-  /* Text style for "Настоящий" */
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   line-height: 24px;
 }
 
 .shipping-companies {
-  /* Text style for "Деловые ли" */
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
 }
 
 .more-about-company {
-  width: 139px;
-  min-height: 12px;
+  width: 220px;
+  height: 38px;
+  background-color: #ee3643;
   color: #ffffff;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -234,8 +280,7 @@ header {
 }
 
 .contacts-name {
-  /* Text style for "КОНТАКТЫ" */
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -243,7 +288,6 @@ header {
 }
 
 .pick-point {
-  /* Text style for "Вы можете" */
   font-family: "PT Sans";
   font-weight: 400;
   line-height: 24px;
@@ -251,7 +295,7 @@ header {
 
 .footer-menu {
   width: 1917px;
-  height: 300px;
+  min-height: 300px;
   background-color: #32425c;
 }
 
@@ -266,8 +310,7 @@ header {
 
 .adress-bottom {
   color: #f3f7f9;
-  display: block;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -280,36 +323,39 @@ header {
 
 .bottom-navigation {
   color: #f1f5f7;
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.categories-bottom{
+.categories-bottom {
   color: #ffd180;
-font-family: Cuprum;
-font-size: 18px;
-font-weight: 400;
-line-height: 24px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .footer-info {
   display: block;
   background-color: #293449;
 }
+
 .copyright {
   color: #ffffff;
-font-family: Cuprum;
-font-size: 16px;
-font-weight: 400;
-line-height: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
-.academy-connect{
-font-family: Cuprum;
-font-size: 16px;
-font-weight: 400;
-line-height: 18px;
-color: #ffffff;
+.academy-connect {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
 }
+
+.catalog-page {}
