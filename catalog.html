@@ -3,60 +3,83 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700&amp;subset=latin,cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <title>HTML Academy: Техномарт</title>
 </head>
 
 <body class="catalog-page">
   <header class="main-header">
-    <nav class="system-navigation">
-      <a class="main-header-logo-current">
-        <img src="img/logo-technomart.svg" width="150" height="100" alt="Логотип магазина 'Техномарт'">
-      </a>
-
-      <form action="#" method="get">
-        <input name="s" placeholder="Поиск:" type="search">
-        <button type="submit"><img src="#" alt="Поиск"></button>
-      </form>
-
-      <div class="system-navigation">
-        <ul class="user-menu">
-          <li><a href="#">Закладки:0</a></li> <!-- Пока не знаю как счетчик ставить для корзины и закладок-->
-          <li><a class="full-basket" href="#">Корзина:10</li>
-        </ul>
+    <nav class="nav-block">
+      <div class="container">
+        <div class="nav-block__main">
+          <a class="nav-block__logo">
+            <img src="img/logo-technomart.svg" width="109px" height="19px" alt="Логотип магазина 'Техномарт'">
+          </a>
+          <form class="nav-block__search" action="" method="get">
+            <button type="submit"><img src="img/icon-search.svg"></button>
+            <input name="s" placeholder="Поиск:" type="search">
+          </form>
+        </div>
+        <div class="nav-block__buys">
+          <div class="nav-block__tips">
+            <img src="img/icon-cart.svg" alt="Закладки">
+            <a href="#">Закладки: 0</a>
+          </div>
+          <div class="nav-block__cart">
+            <img src="img/icon-bookmark.svg" alt="Корзина">
+            <a href="#">Корзина: 0</a>
+            <a href="#" class="nav-block__buy-button">Оформить заказ</a>
+          </div>
+        </div>
       </div>
-
-      <a class="buy-button" href="#">Оформить заказ</a>
-
-      <a class="my-name" href="#">Равшан Джамшутович</a>
-
-      <a class="login-link" href="#">Мои заказы</a>
-
-      <a class="register-link" href="#">Личный кабинет</a>
-
     </nav>
-    <section class="intro-menu">
-      <h1>Интернет-магазин<br>
-        строительных материалов<br>
-        и инструментов для ремонта</h1>
-
-      <a href="tel:+78125550555">+7(812)555-05-55</a>
-      <!--Номер с ссылочкой-->
-
-      <b class="adress-top">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8Б</b>
-
-
+    <div class="main-menu">
+      <div class="container">
+        <div class="menu-block">
+          <div class="main-menu__name">
+            <h1 class="main-menu__name-shop">Интернет-магазин<br>
+              строительных материалов<br>
+              и инструментов для ремонта</h1>
+          </div>
+          <div class="main-menu__contacts">
+            <div class="main-menu__phone">
+              <a class="main-menu__phone-shop" href="tel:+78125550555"><img class="phone" src="img/icon-phone.svg" alt="Поиск">+7(812)555-05-55</a>
+              <b class="main-menu__adress-top">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8Б</b>
+            </div>
+          </div>
+          <div class="main-menu__menu">
+            <div class="name-surename">
+              <img class="main-menu__icon-user" src="img/icon-user.svg" alt="Личный кабинет">
+              <span class="user-name">Равшан Джамшутович</span>
+              <a class="main-menu__logout" href="#"><img src="img/icon-logout.svg" alt="Выйти"></a>
+            </div>
+            <div class="user-menu">
+              <ul class="user-menu__list">
+                <li class="user-menu__item"><a href="#">Мои заказы</a></li>
+                <li class="user-menu__item"><a href="#">Личный кабинет</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="main-nav">
+      <div class="container">
+        <div class="main-nav__list">
+          <ul class="site-nav">
+            <li class="site-nav-setting">Главная</a></li>
+            <li class="site-nav-setting"><a href="#">Компания</a></li>
+            <li class="site-nav-setting"><a href="catalog.html">Каталог</a></li>
+            <li class="site-nav-setting"><a href="#">Новости</a></li>
+            <li class="site-nav-setting"><a href="#">Спецпредложеня</a></li>
+            <li class="site-nav-setting"><a href="#">Доставка</a></li>
+            <li class="site-nav-setting"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Компания</a></li>
-        <li class="main-page-current">Каталог</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Спецпредложеня</a></li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
@@ -67,7 +90,7 @@
         <li><a href="#">Перфораторы</a></li>
       </ul>
     </div>
-    <h1>Перфораторы</h1>
+    <h2 class="name-1">Перфораторы</h2>
     <!-- фильтр по цене-->
     <h3>Производители</h3>
     <form class="filter" action="#" method="get">
@@ -250,72 +273,89 @@
         </a>
         <a class="#" href="#">12500 Р.</a>
       </article>
+      <div class="page-buttons">
+        <ul class="page-buttons__list">
+          <li> <a href="#">1</a> </li>
+          <li> <a href="#">2</a> </li>
+          <li> <a href="#">3</a> </li>
+          <li> <a href="#">СЛУДУЮЩАЯ</a> </li>
+        </ul>
+      </div>
     </div>
-  </main>
-  <footer>
-    <section class="info">
-      <h3>Компания "Техномарт"</h3>
-      <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
-        строительства не оставят равнодушными любителей сэкономить на гастарбайтерах.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России!</p>
-      <p></p>
-      <p></p>
-      <!-- Сделал 2 пустых параграфа -->
-      Техномарт работает со многиими транспортными компаниями:</p>
-      <ul class="shipping-companies">
-        <li>Деловые линиии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="more-about-company" href="#">Подробнее о копании</a>
-      <div class="contacts">
-        <h3>Контакты</h3>
-        <p>Вы можете забрать товар самии,<br>
-          заехав в наш офис:</p>
-        <a href="https://yandex.ru/maps/?um=constructor%3A21af0fb1abdae613fbf93d9bff1f2ef4ea6358be0fe0fdfe7d41dbea825c28fb&amp;source=constructorStatic" target="_blank"><img
-            src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A21af0fb1abdae613fbf93d9bff1f2ef4ea6358be0fe0fdfe7d41dbea825c28fb&amp;width=438&amp;height=210&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
-        <a class="location-map" href="#">Заблудились?Напшите нам!</a>
+    <section class="perforator-about">
+      <h2 class="name-2">Пара слов о перфораторах</h2>
+      <div class="perforator-about__info">
+        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В <br>
+        ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
       </div>
     </section>
-    <section class="footer-menu">
-      <nav class="footer-navigation">
-
-        <a class="footer-navigation-logo-current">
-          <img src="img/logo-technomart.svg" width="150" height="100" alt="Логотип магазина 'Техномарт'">
-        </a>
-
-        <ul class="bottom-navigation">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li class="main-page-current">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <p class="adress-bottom">г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8<br>
-          <a href="tel:+78125550555">+7(812)555-05-55</a>
-        </p>
-
-        <ul class="categories-bottom">
-          <li><a href="#">Материалы</a>></li>
-          <li><a href="#">Техника</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Спецпредложеня</a></li>
-        </ul>
-      </nav>
+  </main>
+  <footer>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__contacts">
+          <div class="contacts__logo">
+            <a><img src="img/logo-technomart.svg" width="109px" height="19px" alt="Логотип магазина 'Техномарт'"></a>
+          </div>
+          <div class="contacts__info">
+            <ul class="contacts-list">
+              <li class="contacts-list__item">Компания</li>
+              <li class="contacts-list__item">Новости</li>
+              <li class="contacts-list__item">Каталог</li>
+              <li class="contacts-list__item">Доставка</li>
+              <li class="contacts-list__item">Контакты</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="footer-info">
-      <p>©2010-2017 Компания "Техномарт"<br>
-        Все права защищены</p>
-      <table class="social-network">
-        <tr>
-          <td>Обратная связь:</td>
-          <td>Разрабоотано-</td>
-        </tr>
-        <tr>
-          <td><a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a></td>
-          <td><a href="htmlacademy.ru">mail@htmlacademy.ru</a></td>
-        </tr>
-      </table>
+    <section class="footer-location">
+      <div class="container">
+        <div class="footer-nav">
+          <div class="footer__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+            +7 (812) 555-05-55</div>
+          <div class="footer-nav__list">
+            <ul class="categories-list">
+              <li class="categories-list__item">Материалы</li>
+              <li class="categories-list__item">Техника</li>
+              <li class="categories-list__item">Инструмент</li>
+              <li class="categories-list__item">Спецпредложения</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-bottom">
+      <div class="container">
+        <div class="footer-copyright">
+          <div class="footer__copyright">
+            <p>©2010-2017 Компания "Техномарт"<br>
+              Все права защищены</p>
+          </div>
+          <div class="footer-media">
+            <ul class="footer-media__list">
+              <li class="footer-media__item"><a href="vk.com"><img class="media-vk" src="img/icon-vk.svg" alt="Вконтакте"></a></li>
+              <li class="footer-media__item"><a href="facebook.com"><img class="media-fb" src="img/icon-fb.svg" alt="facebook"></a></li>
+              <li class="footer-media__item"><a href="instagram.com"><img class="media-inst" src="img/icon-insta.svg" alt="instagram"></a></li>
+            </ul>
+          </div>
+          <div class="table-social-work">
+            <table class="footer-bottom__made-by">
+              <tr class="academy-connect">
+                <td class="redirect">Обратная связь:</td>
+                <td class="redirect">Разработано-</td>
+              </tr>
+              <tr class="footer-bottom__mail">
+                <td class="redirect"><a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a></td>
+                <td class="redirect"><a href="htmlacademy.ru">htmlacademy.ru</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
     </section>
   </footer>
   <!-- Уведомление о корзине -->
