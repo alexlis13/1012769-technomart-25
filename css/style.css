@@ -34,12 +34,27 @@ a {
   color: white;
 }
 
-.nav-block__logo img:hover {
+.nav-block__logo a:hover {
   background-color: #ca2c37;
 }
 
-.nav-block__logo img:active {
+.nav-block__logo a:active {
   background-color: #ba2732;
+}
+
+.nav-block__search {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.nav-block__search::placeholder {
+  color: white;
+}
+
+.nav-block__search-icon {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  opacity: 0.3;
 }
 
 .container {
@@ -56,6 +71,16 @@ a {
   font-family: "Cuprum", "Arial", sans-serif;
 }
 
+.nav-block__tips {
+  width: 150px;
+  border-color: #293449;
+}
+
+.nav-block__tips a :hover {
+  width: 150px;
+  background-color: #212a3a;
+}
+
 .nav-block__buys {
   width: 627px;
   display: flex;
@@ -70,7 +95,7 @@ a {
 }
 
 .nav-block__buys a:hover {
-  background-color: #212a3a;
+  background-color: red;
 }
 
 .nav-block__buys a:active {
@@ -161,8 +186,6 @@ header {
   font-size: 21px;
   line-height: 21px;
 }
-
-
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .main-menu__name-shop {
@@ -370,7 +393,7 @@ header {
   padding: 0px 30px;
 }
 
-.footer-bottom{
+.footer-bottom {
   background-color: #293449;
   height: 107px;
 }
@@ -387,33 +410,33 @@ header {
 .footer__copyright {
   display: flex;
   width: 100%;
-height: 33px;
-color: #ffffff;
-font-family: "Cuprum";
-font-size: 16px;
-padding-top: 30px;
+  height: 33px;
+  color: #ffffff;
+  font-family: "Cuprum";
+  font-size: 16px;
+  padding-top: 30px;
 }
 
-.footer-media{
+.footer-media {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.footer-media__list{
-align-items: center;
-display: flex;
-flex-direction: row;
+.footer-media__list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
-.footer-media__item{
-padding: 0px 13px;
-padding-top: 25px;
-background-color: #212a3a;
-border-radius: 50%;
+.footer-media__item {
+  padding: 0px 13px;
+  padding-top: 25px;
+  background-color: #212a3a;
+  border-radius: 50%;
 }
 
-.table-social-work{
+.table-social-work {
   display: flex;
   font-family: "Cuprum";
   font-size: 16px;
@@ -422,56 +445,58 @@ border-radius: 50%;
   padding-top: 40px;
 }
 
-.redirect{
+.redirect {
   padding: 0px 21px;
 }
 
 .footer-bottom__mail a {
   color: #ffd180;
 }
+
 /* !!!!!!!!!!!!!!!!CATALOG.HTML!!!!!!!!!!!!!!!! */
-.main-menu__menu{
+.main-menu__menu {
   display: flex;
   flex-direction: column;
 }
 
-.name-surename{
+.name-surename {
   display: flex;
   align-items: center;
   flex-direction: row;
   width: 299px;
-height: 45px;
-background-color: white;
-justify-content: space-between;
+  height: 45px;
+  background-color: white;
+  justify-content: space-between;
 }
 
-.main-menu__icon-user{
+.main-menu__icon-user {
   padding: 13px 13px;
 }
 
-.user-name{
-color: #000000;
-font-family: "Cuprum";
-font-size: 21px;
-padding-left: 15px;
-padding-right: 15px;
+.user-name {
+  color: #000000;
+  font-family: "Cuprum";
+  font-size: 21px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.main-menu__logout{
+.main-menu__logout {
   padding: 14px 8px;
 }
 
-.user-menu__list{
+.user-menu__list {
   list-style: none;
   display: flex;
   flex-direction: row;
 }
 
-.user-menu__item{
+.user-menu__item {
   padding: 0px 12px;
 }
+
 /* !!!!!!!!!!!!!!FOOTER!!!!!!!!!!!!!!!! */
-.perforator-about{
+.perforator-about {
   display: flex;
   background-color: #f2f6f8;
   flex-direction: column;
@@ -480,17 +505,16 @@ padding-right: 15px;
   align-items: center;
 }
 
-
-.name-2{
+.name-2 {
   font-family: "Cuprum";
-font-size: 30px;
-text-transform: uppercase;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
-.perforator-about__info{
-color: #000000;
-font-family: "Arial";
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
+.perforator-about__info {
+  color: #000000;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
