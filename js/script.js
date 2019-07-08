@@ -1,130 +1,128 @@
-var link = document.querySelector(".login");
-var popup = document.querySelector(".login-popup");
-var close = document.querySelector(".login-popup-close");
-var login = document.querySelector(".login-field");
-var form = popup.querySelector("form");
-var login = form.querySelector(".login-field");
-var password = form.querySelector(".password-field");
-var storage = localStorage.getItem("login");
-/* slider */
-var ul;
-var li_items;
-var imageNumber;
-var imageWidth;
-var prev, next;
-var currentPostion = 0;
-var currentImage = 0;
-/* slider-2 */
+var buyLink = document.querySelectorAll(".buy-link");
+var buyPopup = document.querySelector(".cart-added");
+var buyClose = buyPopup.querySelector(".btn-close");
+var proceed = buyPopup.querySelector(".continue-btn");
 
-link.addEventListener("click", function () {
-  event.preventDefault();
-  popup.classList.add("login-popup-show");
+var link = document.querySelector(".contact-btn");
+var popup = document.querySelector(".support-modal");
+var close = popup.querySelector(".btn-close");
+var login = popup.querySelector("[name=login]");
+var email = popup.querySelector("[name=email]");
+var form = popup.querySelector(".feedback-form");
+
+var map = document.querySelector(".map-popup");
+var mappopup = document.querySelector(".map-pop-up");
+var closemap = mappopup.querySelector(".btn-close");
+
+var sliders = document.querySelectorAll(".slider");
+var arrows = document.querySelectorAll(".slider-btn");
+var toggles = document.querySelectorAll(".slider-indicator");
+
+var options = document.querySelectorAll(".services-list-item");
+var cards = document.querySelectorAll(".services-items-description");
+
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+link.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  
   if (storage) {
     login.value = storage;
     password.focus();
   } else {
     login.focus();
   }
-}, false);
+});
 
-close.addEventListener("click", function () {
-  event.preventDefault();
-  popup.classList.remove("login-popup-show");
-}, false);
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+});
 
-form.addEventListener("submit", function () {
-  if (!login.value || !password.value) {
-    event.preventDefault();
-    popup.classList.add("login-popup-error");
+form.addEventListener("submit", function (evt) {
+  if (!login.value || !email.value) {
+    evt.preventDefault();
+    console.log("login or email required");
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-error");
   } else {
-    localStorage.setItem("login", login.value);
-  }
-}, false);
-
-window.addEventListener("keydown", function (event) {
-  if (event.keyCode == 27 && popup.classList.contains("login-popup-show")) {
-    popup.classList.remove("login-popup-show");
-  }
-}, false);
-
-/* slider */
-
-function init() {
-  ul = document.getElementById('slider');
-  li_items = ul.children;
-  imageNumber = li_items.length;
-  imageWidth = li_items[0].children[0].clientWidth;
-  ul.style.width = parseInt(imageWidth * imageNumber) + 'px';
-  prev = document.getElementById("prev");
-  next = document.getElementById("next");
-  //.onclike = slide(-1) will be fired when onload;
-  /*
-	prev.onclick = function(){slide(-1);};
-	next.onclick = function(){slide(1);};*/
-  prev.onclick = function () {
-    onClickPrev();
-  };
-  next.onclick = function () {
-    onClickNext();
-  };
-}
-
-function animate(opts) {
-  var start = new Date;
-  var id = setInterval(function () {
-    var timePassed = new Date - start;
-    var progress = timePassed / opts.duration;
-    if (progress > 1) {
-      progress = 1;
+    if (isStorageSupport) {
+      localStorage.setItem("login", login.value);
     }
-    var delta = opts.delta(progress);
-    opts.step(delta);
-    if (progress == 1) {
-      clearInterval(id);
-      opts.callback();
-    }
-  }, opts.delay || 17);
-  //return id;
-}
-
-function slideTo(imageToGo) {
-  var direction;
-  var numOfImageToGo = Math.abs(imageToGo - currentImage);
-  // slide toward left
-
-  direction = currentImage > imageToGo ? 1 : -1;
-  currentPostion = -1 * currentImage * imageWidth;
-  var opts = {
-    duration: 500,
-    delta: function (p) {
-      return p;
-    },
-    step: function (delta) {
-      ul.style.left = parseInt(currentPostion + direction * delta * imageWidth * numOfImageToGo) + 'px';
-    },
-    callback: function () {
-      currentImage = imageToGo;
-    }
-  };
-  animate(opts);
-}
-
-function onClickPrev() {
-  if (currentImage == 0) {
-    slideTo(imageNumber - 1);
-  } else {
-    slideTo(currentImage - 1);
   }
-}
+});
+    
+map.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mappopup.classList.add("modal-show");
+});
 
-function onClickNext() {
-  if (currentImage == imageNumber - 1) {
-    slideTo(0);
-  } else {
-    slideTo(currentImage + 1);
-  }
-}
+closemap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mappopup.classList.remove("modal-show");
+});
 
-window.onload = init;
+toggles.forEach(function (el, index) {
+  el.addEventListener("click", function () {
+    sliders.forEach(function (el, index) {
+      if (sliders[index].classList.contains("slider-current")) {
+        sliders[index].classList.remove("slider-current");
+        toggles[index].classList.remove("indicator-current");
+      }
+    })
 
-/* slider-2 */
+    sliders[index].classList.add("slider-current");
+    toggles[index].classList.add("indicator-current");
+  })
+
+  arrows.forEach(function (el, index) {
+    el.addEventListener("click", function () {
+      sliders.forEach(function (el, index) {
+        if (sliders[index].classList.contains("slider-current")) {
+          sliders[index].classList.remove("slider-current");
+          toggles[index].classList.remove("indicator-current");
+        }
+      })
+      sliders[index].classList.add("slider-current");
+      toggles[index].classList.add("indicator-current");
+    })
+  })
+});
+
+options.forEach(function (el, index) {
+  el.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    cards.forEach(function (el, index) {
+      cards[index].classList.add("visually-hidden");
+      options[index].classList.remove("active");
+    })
+    cards[index].classList.remove("visually-hidden");
+    options[index].classList.add("active");
+  })
+});
+
+buyLink.forEach(function (el, index) {
+  el.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    buyPopup.classList.add("modal-show");
+  })
+});
+
+buyClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  buyPopup.classList.remove("modal-show");
+});
+
+proceed.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  buyPopup.classList.remove("modal-show");
+});

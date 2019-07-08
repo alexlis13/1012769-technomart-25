@@ -20,7 +20,7 @@
     <div class="menu-top">
       <div class="container">
         <div class="menu-top__wrapper">
-          <a class="logo" href="#">Техномарт</a>
+          <a class="logo" href="index.html">Техномарт</a>
           <form class="menu-top__search" action="#">
             <input id="menu-top__search-box" name="search" type="text">
             <label for="menu-top__search-box">Поиск:</label>
@@ -50,7 +50,7 @@
           </div>
           <div class="menu-middle__account">
 
-            <a class="user" href="#">Равшан Джамшутович</a><br>
+            <div class="user"><a  class="user__link" href="#">Равшан Джамшутович</a> <a href="#" class="after"></a></div><br>
             <a class="user-orders" href="#">Мои заказы</a>
             <a class="user-profile" href="#">Личный кабинет</a>
 
@@ -97,6 +97,7 @@
   <main>
     <div class="container  clearfix">
       <ul class="breadcrumbs">
+        <a href="index.html" class="beforee"></a>
         <li><a href="#">Каталог</a>
         </li>
         <li><a href="#">Инструмент</a>
@@ -162,6 +163,8 @@
             </div>
           </div>
         </section>
+
+        <button type="submit" class="form-button-submit">Показать</button>
 
       </form>
 
@@ -284,7 +287,7 @@
 
         <div class="catalog__paginator">
           <ul>
-            <li><span class="page-button  page-button--active">1</span>
+            <li><a href="#" class="page-button  page-button--active">1</a>
             </li>
             <li><a class="page-button" href="#">2</a>
             </li>
@@ -304,7 +307,7 @@
       <div class="container">
         <div class="about-product__text-container">
           <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
             дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </div>
@@ -319,7 +322,7 @@
     <div class="footer-upper">
       <div class="container  clearfix">
         <div class="footer-upper__contacts">
-          <a class="footer_logo" href="/">Техномарт</a>
+          <a class="footer_logo" href="index.html">Техномарт</a>
           <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             <br>+7 (812) 555-05-55</p>
         </div>
@@ -373,6 +376,18 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal cart-added">
+    <h3>Товар добавлен в корзину!</h3>
+    <div class="btn-wrapper">
+      <a class="btn" href="#">
+        Оформить заказ
+      </a>
+      <button class="white-btn continue-btn" type="button">Продолжить покупки</button>
+    </div>
+    <button class="btn-close" aria-label="Закрыть окно"></button>
+  </section>
+  <script src="js/catalog.js"></script>
 </body>
 
 </html>
